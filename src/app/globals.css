@@ -1,0 +1,209 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* ==========================================================================
+       WARM CREAM & DEEP ESPRESSO LUXURY LIGHT THEME
+       ========================================================================== */
+    /* Warm Cream & Off-White Background Surfaces */
+    --color-cream-50: #FAF7F2;
+    --color-cream-100: #F5EFE6;
+    --color-cream-200: #ECE4DA;
+    --color-cream-300: #E2D6CB;
+    --color-surface-pure: #FFFFFF;
+
+    /* Deep Espresso Brown Typography & Button Accents */
+    --color-espresso-950: #170E09;
+    --color-espresso-900: #231812;
+    --color-espresso-800: #2E2119;
+    --color-espresso-700: #3D2D23;
+    --color-espresso-600: #5D5046;
+    --color-espresso-500: #75665B;
+    --color-espresso-400: #96867A;
+    --color-espresso-300: #BFB2A7;
+
+    /* Warm Cognac / Architectural Bronze Accents */
+    --color-bronze-500: #9E7246;
+    --color-bronze-400: #BA8E5E;
+    --color-bronze-300: #D8B284;
+    --color-bronze-100: #F4EBE0;
+
+    /* Subtle Architectural Borders & Separators */
+    --border-soft: #EAE5DB;
+    --border-light: #DFD8CC;
+    --border-espresso: #2C2018;
+
+    /* Fonts */
+    --font-heading: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-body: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-serif: "Playfair Display", Georgia, serif;
+    --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  }
+
+  * {
+    border-color: var(--border-soft);
+    box-sizing: border-box;
+  }
+
+  html {
+    color-scheme: light;
+    scroll-behavior: smooth;
+    background-color: var(--color-cream-50);
+  }
+
+  body {
+    background-color: var(--color-cream-50);
+    color: var(--color-espresso-900);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(31, 22, 16, 0.2) var(--color-cream-100);
+  }
+
+  /* Refined Minimalist Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-cream-100);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(31, 22, 16, 0.2);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(31, 22, 16, 0.45);
+  }
+
+  ::selection {
+    background: var(--color-espresso-900);
+    color: #FAF8F5;
+  }
+}
+
+/* ==========================================================================
+   ELEGANT MODERN REAL ESTATE COMPONENT STYLES
+   ========================================================================== */
+
+/* Typography Utilities */
+.font-display {
+  font-family: var(--font-heading);
+}
+
+.font-sans-body {
+  font-family: var(--font-body);
+}
+
+.font-editorial {
+  font-family: var(--font-serif);
+}
+
+.font-data-mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+}
+
+/* Deep Espresso Primary Button */
+.btn-espresso-primary {
+  background-color: #1F1610;
+  color: #FAF8F5;
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(31, 22, 16, 0.16);
+}
+
+.btn-espresso-primary:hover {
+  background-color: #35261C;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(31, 22, 16, 0.22);
+}
+
+.btn-espresso-primary:active {
+  transform: translateY(0);
+}
+
+/* Warm Off-White Secondary Button */
+.btn-espresso-outline {
+  background-color: #FFFFFF;
+  color: #1F1610;
+  border: 1px solid #E2DCD2;
+  font-family: var(--font-body);
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.btn-espresso-outline:hover {
+  background-color: #F5F2EA;
+  border-color: #C8BFB0;
+  color: #140E0A;
+}
+
+/* Floating Elevated Search Bar (Requested soft drop shadow & rounded corners) */
+.floating-search-widget {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(223, 216, 204, 0.6);
+  border-radius: 1.5rem;
+  box-shadow: 0 24px 60px -12px rgba(31, 22, 16, 0.1), 0 8px 24px -4px rgba(31, 22, 16, 0.04);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.floating-search-widget:hover {
+  box-shadow: 0 32px 70px -12px rgba(31, 22, 16, 0.14), 0 12px 30px -4px rgba(31, 22, 16, 0.06);
+}
+
+/* Modern Light Luxury Card */
+.luxury-card {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(223, 216, 204, 0.7);
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 30px -4px rgba(31, 22, 16, 0.04), 0 2px 6px -1px rgba(31, 22, 16, 0.02);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-card:hover {
+  border-color: #C8BEAF;
+  box-shadow: 0 20px 48px -8px rgba(31, 22, 16, 0.1), 0 4px 12px -2px rgba(31, 22, 16, 0.03);
+  transform: translateY(-3px);
+}
+
+/* Warm Translucent Header Panel */
+.luxury-panel {
+  background-color: rgba(250, 248, 245, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(223, 216, 204, 0.8);
+}
+
+/* Soft Pill Tags */
+.metadata-pill {
+  background-color: #F5F2EA;
+  border: 1px solid #E5DFD3;
+  color: #544234;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+}
+
+/* Seamless 3D Canvas Blend Mask (No harsh borders) */
+.canvas-blend-mask {
+  mask-image: radial-gradient(ellipse 92% 88% at 50% 50%, black 72%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 92% 88% at 50% 50%, black 72%, transparent 100%);
+}
+
+/* Subtle Architectural Grid Pattern on Warm Cream */
+.architectural-grid-light {
+  background-size: 56px 56px;
+  background-image: 
+    linear-gradient(to right, rgba(31, 22, 16, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(31, 22, 16, 0.03) 1px, transparent 1px);
+}
